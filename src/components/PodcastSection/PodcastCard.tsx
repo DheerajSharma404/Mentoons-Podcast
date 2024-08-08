@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { FaCirclePlay } from "react-icons/fa6";
+import { FaCirclePause, FaCirclePlay } from "react-icons/fa6";
 
 interface IPODCAST {
   id: number;
@@ -20,15 +20,17 @@ const PodcastCard = ({
   >;
 }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [isPlaying, setIsPlaying] = React.useState<boolean>(false)
+  const [isPlaying, setIsPlaying] = React.useState<boolean>(false);
 
   const handleSamplePlay = (event: React.MouseEvent) => {
     event.stopPropagation(); // Prevent the click event from propagating to the document
     if (currentlyPlaying && currentlyPlaying !== audioRef.current) {
+      setIsPlaying(false);
       currentlyPlaying.pause();
       currentlyPlaying.currentTime = 0;
     }
     if (audioRef.current) {
+      setIsPlaying(true);
       audioRef.current.play();
       setCurrentlyPlaying(audioRef.current);
     }
@@ -69,7 +71,11 @@ const PodcastCard = ({
         >
           <p className='font-semibold '>Play Now</p>
           <button className='text-xl'>
-            <FaCirclePlay color='red' />
+            {isPlaying ? (
+              <FaCirclePause color='red' />
+            ) : (
+              <FaCirclePlay color='red' />
+            )}
           </button>
           <audio ref={audioRef} src={podcast.audioSampleSrc}></audio>
         </span>
@@ -77,8 +83,6 @@ const PodcastCard = ({
         <span className='border border-black  flex rounded-full px-2 py-1 gap-2 cursor-pointer hover:scale-110 transition-all duration-200'>
           <p className='font-semibold '>Buy Now</p>
           <button className='text-xl'>
-            {/* <FaShoppingCart color='red' />
-             */}
             <div className='w-6'>
               <img src='/assets/cart.svg' alt='Cart icon' />
             </div>
