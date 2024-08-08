@@ -30,9 +30,15 @@ const PodcastCard = ({
       currentlyPlaying.currentTime = 0;
     }
     if (audioRef.current) {
-      setIsPlaying(true);
-      audioRef.current.play();
-      setCurrentlyPlaying(audioRef.current);
+      if (isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+        setCurrentlyPlaying(null);
+      } else {
+        audioRef.current.play();
+        setIsPlaying(true);
+        setCurrentlyPlaying(audioRef.current);
+      }
     }
   };
 
@@ -42,6 +48,7 @@ const PodcastCard = ({
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
         setCurrentlyPlaying(null);
+        setIsPlaying(false);
       }
     };
 

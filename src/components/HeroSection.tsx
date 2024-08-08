@@ -29,11 +29,11 @@ const HeroSection = () => {
           <div className=' text-white items-center justify-center gap-2 text-xs sm:text-sm md:text-base  md:flex  animate-blink'>
             <span className='flex items-center justify-center gap-1 whitespace-nowrap'>
               <LuPhoneCall fill='white' />
-              Call us 7892858593
+              Call us <a href='tel:7892858593'>7892858593</a>
             </span>
             <span className='flex items-center justify-center gap-1 '>
               <MdEmail />
-              metalmahesh@gmail.com
+              <a href='mailto:metalmahesh@gmail.com'>metalmahesh@gmail.com</a>
             </span>
           </div>
           <div className='text-lg sm:text-2xl border-[1.5px] border-white rounded-[4px] hover:scale-110 transition-all duration-300 mt-1 mr-1  '>
@@ -92,13 +92,13 @@ const HeroSection = () => {
             <div className='absolute bottom-8 sm:bottom-8 left-2 '>
               {/* Music Note Div */}
               <div className='flex sm:gap-8 justify-end '>
-                <div className=' w-4 rotate-12  md:w-8  '>
+                <div className=' w-4 rotate-12  md:w-12  '>
                   <img src='/assets/music-note-3.png' alt='Music Notes' />
                 </div>
-                <div className=' w-4  md:w-8 flex items-center  '>
+                <div className=' w-4  md:w-9 flex items-center  '>
                   <img src='/assets/music-note-2.png' alt='Music Notes' />
                 </div>
-                <div className=' w-4 flex items-end  md:w-8 '>
+                <div className=' w-4 flex items-end  md:w-6 '>
                   <img
                     src='/assets/music-note-1.png'
                     alt='Music Notes'
