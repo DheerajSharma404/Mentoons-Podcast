@@ -6,6 +6,7 @@ interface IPODCAST {
   topic: string;
   description: string;
   audioSampleSrc: string;
+  thumbnail: string;
 }
 
 const PodcastCard = ({
@@ -59,9 +60,13 @@ const PodcastCard = ({
   }, [setCurrentlyPlaying]);
 
   return (
-    <div className=' border-2 border-neutral-800 p-4 pb-0 rounded-tr-[28px] rounded-tl-[28px]'>
-      <div className=' h-[200px] rounded-tr-xl rounded-tl-xl bg-black'>
-        <img src='' alt='' />
+    <div className=' border-2 border-neutral-800 p-4 pb-0 rounded-tr-[28px] rounded-tl-[28px] group'>
+      <div className=' h-[200px] rounded-tr-xl rounded-tl-xl overflow-hidden  '>
+        <img
+          src={podcast.thumbnail}
+          alt='Podcast thumbnail'
+          className='aspect-video object-cover  group-hover:scale-110 transition-all duration-300'
+        />
       </div>
       <div className='pt-2'>
         <h1 className='text-left text-xl text-neutral-800 font-bold truncate'>

@@ -16,7 +16,7 @@ export const PODCAST_DETAILS = [
     description:
       "Coping with Lose, is a podcast for teens, offering support and guidance on coping with grief and loss. Through real stories and expert advice, we help you heal and understand your emotions.",
     audioSampleSrc: "/assets/audios/coping-with-loss.mp3",
-    thumbnail: "/assets/images/coping-loss.jpg",
+    thumbnail: "/assets/images/coping-with-loss.jpg",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const PODCAST_DETAILS = [
     description:
       "Cell-Aid dives into the evolving role of cell phones in our lives, comparing their impact to that of yesterday's television. Explore how these devices shape culture, communication, and daily life.",
     audioSampleSrc: "/assets/audios/Cell_Aid.mp3",
-    thumbnail: "/assets/images/cell-phone-addiction.jpg",
+    thumbnail: "/assets/images/cell-aid.jpg",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ export const PODCAST_DETAILS = [
     description:
       "How to Overcome Depression offers practical advice and support for managing and overcoming depression. Learn strategies, hear personal stories, and find hope in this encouraging podcast.",
     audioSampleSrc: "/assets/audios/Overcom_Dipression.mp3",
-    thumbnail: "/assets/overcome-dipression.jpg",
+    thumbnail: "/assets/images/overcome-dipression.jpg",
   },
   {
     id: 4,
@@ -49,6 +49,7 @@ export const PODCAST_DETAILS = [
     description:
       "Social Media Reward System delves into how platforms use rewards to keep users hooked. Understand the psychology behind likes, shares, and notifications in this eye-opening podcast.",
     audioSampleSrc: "/assets/audios/Social_Media_reward_system.mp3",
+    thumbnail: "/assets/images/social-media-reward-system.jpg",
   },
   {
     id: 6,
@@ -72,6 +73,6 @@ export const PODCAST_DETAILS = [
     description:
       "Toddler Phone Addiction examines how excessive screen time affects young children. Discover practical tips for managing their phone use and encouraging healthier habits.",
     audioSampleSrc: "/assets/audios/toddler-phone-addiction.mp3",
-    thumbnail: "/assets/images/toddler-phone-addictino.jpg",
+    thumbnail: "/assets/images/toddler-phone-addiction.jpg",
   },
 ];

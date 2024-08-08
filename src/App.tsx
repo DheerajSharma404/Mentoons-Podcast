@@ -1,4 +1,3 @@
-// import { IoMenu } from "react-icons/io5";
 import {
   Category,
   Footer,

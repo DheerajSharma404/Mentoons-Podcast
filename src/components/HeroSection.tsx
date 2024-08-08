@@ -4,6 +4,7 @@ import { LuPhoneCall } from "react-icons/lu";
 import { MdEmail } from "react-icons/md";
 const HeroSection = () => {
   const audioRef = React.useRef<HTMLAudioElement>(null);
+
   const handleIntroPlay = () => {
     if (audioRef.current) {
       audioRef.current.play();
@@ -15,6 +16,7 @@ const HeroSection = () => {
       audioRef.current.currentTime = 0; // Optional: reset audio to the beginning
     }
   };
+
   return (
     <section className=' relative bg-amber-500'>
       <nav className='flex justify-between items-start p-2'>
@@ -41,7 +43,9 @@ const HeroSection = () => {
           </div>
         </div>
       </nav>
-
+      <audio autoPlay>
+        <source src='mentoons-intro-audio.mp3' />
+      </audio>
       {/* Hero Section */}
       <div className='relative '>
         <div className='absolute  left-1/2 -translate-x-1/2 top-2 w-28  min-w-[180px] md:w-80 lg:w-[600px] '>
@@ -59,7 +63,10 @@ const HeroSection = () => {
               alt='Play Button'
               className='w-full object-cover'
             />{" "}
-            <audio ref={audioRef} src='/assets/audios/BORN.mp3'></audio>
+            <audio
+              ref={audioRef}
+              src='/assets/audios/mentoons-intro-audio.mp3'
+            ></audio>
           </div>
           <div
             className='hover:scale-110 transition-all duration-300'
@@ -70,7 +77,10 @@ const HeroSection = () => {
               alt='Pasue Button'
               className='w-full object-cover'
             />
-            <audio ref={audioRef} src='/assets/audios/BORN.mp3'></audio>
+            <audio
+              ref={audioRef}
+              src='/assets/audios/mentoons-intro-audio.mp3'
+            ></audio>
           </div>
         </div>
 
@@ -102,7 +112,7 @@ const HeroSection = () => {
                   <img
                     src='/assets/music-note-1.png'
                     alt='Music Notes'
-                    className=''
+                    className='w-full object-cover'
                   />
                 </div>
               </div>
