@@ -31,7 +31,7 @@ const HeroSection = () => {
           <div className=' text-white items-center justify-center gap-2 text-xs sm:text-sm md:text-base  md:flex  animate-blink'>
             <span className='flex items-center justify-center gap-1 whitespace-nowrap'>
               <LuPhoneCall fill='white' />
-              Call us <a href='tel:7892858593'>7892858593</a>
+              Call us <a href='tel:9036033300'>9036033300</a>
             </span>
             <span className='flex items-center justify-center gap-1 '>
               <MdEmail />
