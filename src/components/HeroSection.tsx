@@ -19,8 +19,8 @@ const HeroSection = () => {
 
   return (
     <section className=' relative bg-amber-500'>
-      <nav className='flex justify-between items-start p-2'>
-        <div className='w-28 sm:w-40 md:w-60 lg:w-72'>
+      <nav className='flex justify-between items-center px-4  pb-0'>
+        <div className='w-28 sm:w-40 md:w-60 lg:w-40'>
           <img
             src='/assets/mentoons-logo.png'
             alt='Mentoons Logo'

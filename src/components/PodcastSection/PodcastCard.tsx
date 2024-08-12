@@ -5,8 +5,13 @@ interface IPODCAST {
   id: number;
   topic: string;
   description: string;
-  audioSampleSrc: string;
+  audioPodcastSampleSrc: string;
+  audioPodcastSrc: string;
   thumbnail: string;
+  categroy: string;
+  age: string;
+  author: string;
+  duration: string;
 }
 
 const PodcastCard = ({
@@ -42,6 +47,18 @@ const PodcastCard = ({
       }
     }
   };
+  useEffect(() => {
+    const audioElement = audioRef.current;
+    if (audioElement) {
+      const handleEnded = () => {
+        setCurrentlyPlaying(null);
+      };
+      audioElement.addEventListener("ended", handleEnded);
+      return () => {
+        audioElement.removeEventListener("ended", handleEnded);
+      };
+    }
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = () => {
@@ -89,7 +106,7 @@ const PodcastCard = ({
               <FaCirclePlay color='red' />
             )}
           </button>
-          <audio ref={audioRef} src={podcast.audioSampleSrc}></audio>
+          <audio ref={audioRef} src={podcast.audioPodcastSampleSrc}></audio>
         </span>
 
         <span className='border border-black  flex rounded-full px-2 py-1 gap-2 cursor-pointer hover:scale-110 transition-all duration-200'>
