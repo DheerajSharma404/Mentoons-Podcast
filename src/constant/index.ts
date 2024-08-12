@@ -20,7 +20,7 @@ export const PODCAST_DETAILS = [
     thumbnail: "/assets/images/coping-with-loss.jpg",
     categroy: "",
     age: "",
-    author: "",
+    author: "Mentor Mahesh",
     duration: "",
   },
   {
@@ -33,7 +33,7 @@ export const PODCAST_DETAILS = [
     thumbnail: "/assets/images/cell-aid.jpg",
     categroy: "",
     age: "",
-    author: "",
+    author: "Mentor Mahesh",
     duration: "",
   },
   {
@@ -46,7 +46,7 @@ export const PODCAST_DETAILS = [
     thumbnail: "/assets/images/overcome-dipression.jpg",
     categroy: "",
     age: "",
-    author: "",
+    author: "Mentor Mahesh",
     duration: "",
   },
   {
@@ -73,7 +73,7 @@ export const PODCAST_DETAILS = [
     thumbnail: "/assets/images/social-media-reward-system.jpg",
     categroy: "",
     age: "",
-    author: "",
+    author: "Mentor Mahesh",
     duration: "",
   },
   {
@@ -86,7 +86,7 @@ export const PODCAST_DETAILS = [
     thumbnail: "/assets/images/staying-sober.jpg",
     categroy: "",
     age: "",
-    author: "",
+    author: "Mentor Mahesh",
     duration: "",
   },
   {
@@ -99,7 +99,7 @@ export const PODCAST_DETAILS = [
     thumbnail: "/assets/images/entertainment-addiction.jpg",
     categroy: "",
     age: "",
-    author: "",
+    author: "Mentor Mahesh",
     duration: "",
   },
   {
@@ -112,7 +112,7 @@ export const PODCAST_DETAILS = [
     thumbnail: "/assets/images/toddler-phone-addiction.jpg",
     categroy: "",
     age: "",
-    author: "",
+    author: "Mentor Mahesh",
     duration: "",
   },
   {
@@ -125,7 +125,7 @@ export const PODCAST_DETAILS = [
     thumbnail: "/assets/images/social-media-de-addiction.jpg",
     categroy: "",
     age: "6-12",
-    author: "",
+    author: "Mentor Mahesh",
     duration: "",
   },
 ];

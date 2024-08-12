@@ -1,7 +1,7 @@
 import { AGE_CATEGORY } from "../../constant";
 const AgeCategory = () => {
   return (
-    <section className='flex items-center justify-between gap-4 px-12 pb-6 '>
+    <section className='flex  items-center justify-between gap-4 px-4 md:px-12 pb-6 flex-wrap  lg:flex-nowrap '>
       {AGE_CATEGORY.map((age) => {
         return (
           <div

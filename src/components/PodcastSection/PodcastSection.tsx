@@ -5,7 +5,7 @@ import PodcastCardExp from "./PodcastCardExp";
 const PodcastSection = () => {
   const [currentlyPlaying, setCurrentlyPlaying] =
     React.useState<HTMLAudioElement | null>(null);
-    const [isSubscribed, setIsSubscribed] = React.useState<boolean>(false);
+  const [isSubscribed, setIsSubscribed] = React.useState<boolean>(false);
   return (
     <section className='p-4 pt-0'>
       <div className='grid grid-cols-1 gap-4  md:grid-cols-2  md:px-8 lg:grid-cols-3'>

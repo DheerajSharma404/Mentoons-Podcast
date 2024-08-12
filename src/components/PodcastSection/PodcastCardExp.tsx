@@ -132,7 +132,16 @@ const PodcastCardExp = ({
           </span>
         )}
       </p>
-      <p className='text-sm text-black mb-4 '>{podcast.description}</p>
+
+      <p className='text-sm text-black mb-2 line-clamp-3'>
+        {podcast.description}
+      </p>
+      <div className=' flex gap-3 items-center  text-xs mb-6'>
+        <div className='w-8 rounded-full bg-red-600'>
+          <img src='/assets/author.jpg' alt='' />
+        </div>
+        <span>{podcast.author}</span>
+      </div>
       <div className='h-48 overflow-hidden rounded-[12px] '>
         <img
           src={podcast.thumbnail}
