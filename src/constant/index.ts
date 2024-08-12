@@ -108,7 +108,7 @@ export const PODCAST_DETAILS = [
     description:
       "Toddler Phone Addiction examines how excessive screen time affects young children. Discover practical tips for managing their phone use and encouraging healthier habits.",
     audioPodcastSampleSrc: "/assets/audios/toddler-phone-addiction.mp3",
-    audioPodactSrc: "/assets/audios/toddler-phone-addiction.mp3",
+    audioPodcastSrc: "/assets/audios/toddler-phone-addiction.mp3",
     thumbnail: "/assets/images/toddler-phone-addiction.jpg",
     categroy: "",
     age: "",
@@ -121,7 +121,7 @@ export const PODCAST_DETAILS = [
     description:
       "Social media de-addiction  is a podcast that helps young listeners break free from social media addiction by exploring fun, screen-free activities and the importance of real-life connections. Join us on a journey to discover a balanced, healthier way to enjoy the digital world.",
     audioPodcastSampleSrc: "/assets/audios/social-media-de-addiction.mp3",
-    audioPodactSrc: "/assets/audios/social-media-de-addiction.mp3",
+    audioPodcastSrc: "/assets/audios/social-media-de-addiction.mp3",
     thumbnail: "/assets/images/social-media-de-addiction.jpg",
     categroy: "",
     age: "6-12",

@@ -105,8 +105,8 @@ const PodcastCardExp = ({
               ref={audioRef}
               src={
                 isSubscribed
-                  ? podcast.audioPodcastSrc
-                  : podcast.audioPodcastSampleSrc
+                  ? podcast?.audioPodcastSrc
+                  : podcast?.audioPodcastSampleSrc
               }
             ></audio>
           </button>
