@@ -3,6 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        "custom-gray": "rgba(219,219,219,1)",
+        "custom-white": "rgba(255,255,255,1)",
+      },
       keyframes: {
         blink: {
           "0%, 100%": { opacity: 1 },

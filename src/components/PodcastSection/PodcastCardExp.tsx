@@ -34,24 +34,26 @@ const PodcastCardExp = ({
   setIsSubscribed: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const audioRef = React.useRef<HTMLAudioElement>(null);
+
   const [isPlaying, setIsPlaying] = React.useState<boolean>(false);
 
   const handleSamplePlay = (event: React.MouseEvent) => {
     event.stopPropagation(); // Prevent the click event from propagating to the document
     if (currentlyPlaying && currentlyPlaying !== audioRef.current) {
-      setIsPlaying(false);
       currentlyPlaying.pause();
       currentlyPlaying.currentTime = 0;
+      setIsPlaying(!isPlaying);
+      setCurrentlyPlaying(null);
     }
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
-        setIsPlaying(false);
+        setIsPlaying(!isPlaying);
         setCurrentlyPlaying(null);
       } else {
         audioRef.current.play();
-        setIsPlaying(true);
+        setIsPlaying(!isPlaying);
         setCurrentlyPlaying(audioRef.current);
       }
     }
@@ -65,8 +67,8 @@ const PodcastCardExp = ({
 
     if (audioElement) {
       const handleEnded = () => {
-        setIsPlaying(false);
         audioElement.currentTime = 0;
+        setIsPlaying(!isPlaying);
         setCurrentlyPlaying(null);
       };
       audioElement.addEventListener("ended", handleEnded);
@@ -100,7 +102,11 @@ const PodcastCardExp = ({
             className=' bg-amber-500  rounded-full px-4 py-2 text-white  flex gap-2 items-center justify-center whitespace-nowrap'
           >
             Play Now
-            {isPlaying ? <FaCirclePause /> : <FaCirclePlay />}
+            {currentlyPlaying === audioRef.current && isPlaying ? (
+              <FaCirclePause />
+            ) : (
+              <FaCirclePlay />
+            )}
             <audio
               ref={audioRef}
               src={
@@ -121,17 +127,19 @@ const PodcastCardExp = ({
           )}
         </div>
       </div>
-      <p className='text-xl font-bold text-black mb-4 flex gap-2'>
-        {podcast.topic}
-        {isPlaying && (
-          <span className='px-2 py-1 text-xs text-white bg-red-500 leading-tight font-medium flex gap-2 items-center justify-between rounded-full'>
-            Currently Playing
+      <div className='text-xl font-bold text-black mb-4 line-clamp-1 flex items-center justify-between '>
+        <span className='truncate '>{podcast.topic}</span>
+        {currentlyPlaying === audioRef.current && isPlaying && (
+          <span
+            className=' px-2 h-6 text-xs text-white bg-red-500 leading-tight font-medium flex gap-2 items-center justify-between
+           rounded-full whitespace-nowrap'
+          >
             <div className='rotate-90'>
               <FaAlignCenter />
             </div>
           </span>
         )}
-      </p>
+      </div>
 
       <p className='text-sm text-black mb-2 line-clamp-3'>
         {podcast.description}
