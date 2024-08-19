@@ -227,27 +227,69 @@ export const PODCAST_DETAILS = [
 
 export const AGE_CATEGORY = [
   {
-    id: 1,
+    id: 16,
     minAge: 2,
     maxAge: 5,
     ageCategoryBannerImgSrc: "/assets/images/age_2-5.jpg",
   },
   {
-    id: 2,
+    id: 17,
     minAge: 6,
     maxAge: 12,
     ageCategoryBannerImgSrc: "/assets/images/age_6-12.jpg",
   },
   {
-    id: 3,
+    id: 18,
     minAge: 13,
     maxAge: 19,
     ageCategoryBannerImgSrc: "/assets/images/age_13-19.jpg",
   },
   {
-    id: 4,
+    id: 19,
     minAge: 20,
     maxAge: "+",
     ageCategoryBannerImgSrc: "/assets/images/age_20+.jpg",
+  },
+];
+
+export const LEFT_NAVLINKS = [
+  {
+    id: 20,
+    label: "Home",
+  },
+  {
+    id: 21,
+    label: "About",
+  },
+  {
+    id: 22,
+    label: "WorkShop",
+  },
+  {
+    id: 23,
+    label: "Gallery",
+  },
+  {
+    id: 24,
+    label: "Team",
+  },
+];
+
+export const RIGHT_NAVLINKS = [
+  {
+    id: 25,
+    label: "Comics",
+  },
+  {
+    id: 26,
+    label: "Podcast",
+  },
+  {
+    id: 28,
+    label: "Mentoons Store",
+  },
+  {
+    id: 29,
+    label: "Sign up",
   },
 ];

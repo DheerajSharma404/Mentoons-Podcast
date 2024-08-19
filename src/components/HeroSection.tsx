@@ -1,7 +1,5 @@
 import React from "react";
-import { IoMenu } from "react-icons/io5";
-import { LuPhoneCall } from "react-icons/lu";
-import { MdEmail } from "react-icons/md";
+import Navbar from "./Navbar";
 const HeroSection = () => {
   const audioRef = React.useRef<HTMLAudioElement>(null);
 
@@ -18,8 +16,8 @@ const HeroSection = () => {
   };
 
   return (
-    <section className=' relative bg-amber-500'>
-      <nav className='flex justify-between items-center px-4  pb-0'>
+    <section className=' relative bg-orange '>
+      {/* <nav className='flex justify-between items-center px-4  pb-0'>
         <div className='w-28 sm:w-40 md:w-60 lg:w-40'>
           <img
             src='/assets/mentoons-logo.png'
@@ -42,13 +40,14 @@ const HeroSection = () => {
             <IoMenu color='white' />
           </div>
         </div>
-      </nav>
+      </nav> */}
+      <Navbar />
       <audio autoPlay>
         <source src='mentoons-intro-audio.mp3' />
       </audio>
       {/* Hero Section */}
       <div className='relative '>
-        <div className='absolute  left-1/2 -translate-x-1/2 top-2 w-28  min-w-[180px] md:w-80 lg:w-[600px] '>
+        <div className='absolute  left-1/2 -translate-x-1/2 top-8 w-28  min-w-[180px] md:w-80 lg:w-[600px] '>
           <img src='/assets/podcast-logo.png' alt='Podcast logo' />
         </div>
 
@@ -85,7 +84,7 @@ const HeroSection = () => {
         </div>
 
         {/* Hero Image */}
-        <div className='relative'>
+        <div className='relative pt-4'>
           <img
             src='/assets/podcast-hero.png'
             alt='Podcast hero Image'

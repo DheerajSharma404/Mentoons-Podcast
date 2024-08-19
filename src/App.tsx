@@ -1,24 +1,21 @@
-import {
-  Category,
-  Footer,
-  HeroSection,
-  PodcastSection,
-  StatisticsSection,
-} from "./components";
+import { Category, Footer, HeroSection, PodcastSection } from "./components";
 import AgeCategory from "./components/Categories/AgeCategory";
-import FrequentlyAskeQuestion from "./FAQSection/FrequentlyAskeQuestion";
+import HomeSection from "./components/hompage/HomeSection";
+import Testimonial from "./components/Testimonial";
 const App = () => {
   return (
     <>
       <HeroSection />
       {/* CATEGORY */}
+      <HomeSection />
       <Category />
       <AgeCategory />
       {/* PODCAST LIST */}
       <PodcastSection />
       {/* Stats section */}
-      <StatisticsSection />
-      <FrequentlyAskeQuestion />
+      {/* <StatisticsSection /> */}
+      <Testimonial />
+      {/* <FrequentlyAskeQuestion /> */}
 
       {/* FOOTER Section */}
       <Footer />
