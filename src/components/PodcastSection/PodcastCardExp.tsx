@@ -76,7 +76,7 @@ const PodcastCardExp = ({
         audioElement.removeEventListener("ended", handleEnded);
       };
     }
-  }, []);
+  }, [isPlaying, setCurrentlyPlaying]);
 
   React.useEffect(() => {
     const handleClickOutside = () => {

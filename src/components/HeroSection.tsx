@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 const HeroSection = () => {
   const audioRef = React.useRef<HTMLAudioElement>(null);
 
@@ -41,18 +40,18 @@ const HeroSection = () => {
           </div>
         </div>
       </nav> */}
-      <Navbar />
+      {/* <Navbar /> */}
       <audio autoPlay>
         <source src='mentoons-intro-audio.mp3' />
       </audio>
       {/* Hero Section */}
-      <div className='relative '>
-        <div className='absolute  left-1/2 -translate-x-1/2 top-8 w-28  min-w-[180px] md:w-80 lg:w-[600px] '>
+      <div className='relative'>
+        <div className='absolute  left-1/2 -translate-x-1/2 top-8 w-28  min-w-[180px] md:w-[400px] lg:w-[600px]'>
           <img src='/assets/podcast-logo.png' alt='Podcast logo' />
         </div>
 
         {/* Play button */}
-        <div className='  absolute bottom-4 left-1/2   -translate-x-1/2 w-20  flex gap-2 md:w-24   md:bottom-8 z-50 lg:w-48 lg:bottom-10'>
+        <div className='  absolute bottom-4 left-1/2  -translate-x-1/2 w-20  flex gap-2 md:w-24  md:bottom-8 z-50 lg:w-48 lg:bottom-10'>
           <div
             className=' hover:scale-110 transition-all duration-300'
             onClick={handleIntroPlay}
@@ -92,16 +91,16 @@ const HeroSection = () => {
           />
 
           {/* Radio */}
-          <div className=' absolute w-20 md:w-32 bottom-4 left-4  md:left-10 md:bottom-6 z-50 lg:w-60 '>
+          <div className=' absolute w-20 sm:w-28 md:w-32 bottom-4 left-4  md:left-10 md:bottom-6 z-50 lg:w-60  '>
             <img
               src='/assets/radio.png'
               alt='Radio Illustration'
               className='w-full object-cover '
             />
-            <div className='absolute bottom-8 sm:bottom-8 left-2 '>
+            <div className='absolute bottom-0 sm:bottom-6  left-2  '>
               {/* Music Note Div */}
-              <div className='flex sm:gap-8 justify-end '>
-                <div className=' w-4 rotate-12  md:w-12  '>
+              <div className='flex sm:gap-2 justify-end '>
+                <div className=' w-4 rotate-12 sm:w-6 md:w-12  '>
                   <img src='/assets/music-note-3.png' alt='Music Notes' />
                 </div>
                 <div className=' w-4  md:w-9 flex items-center  '>

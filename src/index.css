@@ -60,6 +60,10 @@ body {
     );
   }
 
+  .custom-lime {
+    color: #65a30d;
+  }
+
   .rubik-bubbles-regular {
     font-family: "Rubik Bubbles", system-ui;
     font-weight: 400;

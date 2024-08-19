@@ -16,7 +16,7 @@ const Testimonial = () => {
             <img
               src='/assets/images/quotation-mark.svg'
               alt='quotation mark icon'
-              className='w-6 rotate-360 transform scale-x-[-1]'
+              className='w-6 rotate-360 transform scale-x-[-1] custom-lime '
             />
           </div>
           <p className='text-font-22  text-center font-bold text-lime-600  relative'>
@@ -48,7 +48,7 @@ const Testimonial = () => {
             <img
               src='/assets/images/quotation-mark.svg'
               alt='quotation mark icon'
-              className='w-6 rotate-360 transform scale-x-[-1]'
+              className='w-6 rotate-360 transform scale-x-[-1] '
             />
           </div>
           <p className='text-font-22  text-center font-bold text-purple-600  relative'>
