@@ -1,8 +1,16 @@
-import { Category, Footer, HeroSection, PodcastSection } from "./components";
+import React from "react";
+import { Category, HeroSection, PodcastSection } from "./components";
+// import Career from "./components/CareerPage/Career";
 import AgeCategory from "./components/Categories/AgeCategory";
 import HomeSection from "./components/hompage/HomeSection";
+import Modal from "./components/Modal";
+import NewPodcastLayout from "./components/NewPodcastLayout";
 import Testimonial from "./components/Testimonial";
-const App = () => {
+import { ModalContext } from "./contexts/ModalContext";
+const App: React.FC = () => {
+  const { isModalOpen, toggleModal, actionType } =
+    React.useContext(ModalContext);
+
   return (
     <>
       <HeroSection />
@@ -16,9 +24,14 @@ const App = () => {
       {/* <StatisticsSection /> */}
       <Testimonial />
       {/* <FrequentlyAskeQuestion /> */}
-
       {/* FOOTER Section */}
-      <Footer />
+
+      {/* <Career /> */}
+      <NewPodcastLayout />
+
+      {isModalOpen && (
+        <Modal toggleModal={toggleModal} actionType={actionType} />
+      )}
     </>
   );
 };
